@@ -84,7 +84,7 @@ paths:
                 format: integer
                 x-content-type: application/json
         "400":
-          description: "invalid input, object invalid"
+          description: invalid input, object invalid
         "409":
           description: an existing already exists
       x-openapi-router-controller: swagger_server.controllers.default_controller
@@ -108,12 +108,14 @@ components:
           items:
             type: string
       example:
-        student_id: 0.80082819046101150206595775671303272247314453125
+        student_id: 132
         last_name: last_name
         first_name: first_name
         gradeRecords:
-        - gradeRecords
-        - gradeRecords
+        - subject_name: math
+          grade: 5.5
+        - subject_name: science
+          grade: 7.0
     GradeRecord:
       required:
       - grade
@@ -127,4 +129,6 @@ components:
           minimum: 1
           type: number
           format: float
-
+      example:
+        subject_name: math
+        grade: 8.5
