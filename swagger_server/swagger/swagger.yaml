@@ -106,7 +106,7 @@ components:
         gradeRecords:
           type: array
           items:
-            type: string
+            $ref: '#/components/schemas/GradeRecord'
       example:
         student_id: 1
         last_name: last_name

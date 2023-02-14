@@ -32,7 +32,8 @@ def delete_student(student_id):  # noqa: E501
 
     :rtype: None
     """
-    return delete(student_id)
+    response = delete(student_id)
+    return response
 
 
 def get_student_by_id(student_id):  # noqa: E501
@@ -45,4 +46,5 @@ def get_student_by_id(student_id):  # noqa: E501
 
     :rtype: Student
     """
-    return get_by_id(student_id)
+    response = get_by_id(student_id)
+    return response
