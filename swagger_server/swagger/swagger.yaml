@@ -118,8 +118,8 @@ components:
           grade: 7.0
     GradeRecord:
       required:
-      - grade
       - subject_name
+      - grade
       type: object
       properties:
         subject_name:
