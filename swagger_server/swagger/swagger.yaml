@@ -114,8 +114,6 @@ components:
         gradeRecords:
         - subject_name: math
           grade: 5.5
-        - subject_name: science
-          grade: 7.0
     GradeRecord:
       required:
       - subject_name
