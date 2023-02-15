@@ -154,7 +154,7 @@
 							"script": {
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;",
-									"tests[\"Response should not be 'do some magic!'\"] = responseBody != \"do some magic!\";",
+									"tests[\"Response should not be 'do some magic!' => \"+responseBody] = responseBody != \"do some magic!\";",
 									"var jsonData = JSON.parse(responseBody);",
 									"first_name = postman.getEnvironmentVariable(\"first_name\");",
 									"tests[\"Name must be \"+first_name] = jsonData.first_name == first_name;",
@@ -163,7 +163,7 @@
 									"",
 									"subject_name_1 = postman.getEnvironmentVariable(\"subject_name_1\");",
 									"grade_1 = postman.getEnvironmentVariable(\"grade_1\");",
-									"tests[\"Subject must be \"+subject_name_1+\"is actually\"+jsonData['grade_records'][0]['subject_name']] = jsonData['grade_records'][0]['subject_name'] == subject_name_1;",
+									"tests[\"Subject must be \"+subject_name_1] = jsonData['grade_records'][0]['subject_name'] == subject_name_1;",
 									"tests[\"Grade of \"+subject_name_1+\" must be \"+grade_1] = jsonData['grade_records'][0]['grade'] == grade_1;",
 									"",
 									"subject_name_2 = postman.getEnvironmentVariable(\"subject_name_2\");",
