@@ -106,15 +106,16 @@ components:
         gradeRecords:
           type: array
           items:
-            $ref: '#/components/schemas/GradeRecords'
+            type: object
+            format: GradeRecord
       example:
-        student_id: 1
+        student_id: 0
         last_name: last_name
         first_name: first_name
         gradeRecords:
-        - subject_name: math
-          grade: 5.5
-    GradeRecords:
+        - {}
+        - {}
+    GradeRecord:
       required:
       - subject_name
       - grade
@@ -127,6 +128,3 @@ components:
           minimum: 0
           type: number
           format: float
-      example:
-        subject_name: math
-        grade: 8.5
