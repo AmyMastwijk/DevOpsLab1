@@ -106,15 +106,16 @@ components:
         gradeRecords:
           type: array
           items:
-            type: object
-            format: GradeRecord
+            $ref: '#/components/schemas/GradeRecord'
       example:
         student_id: 0
         last_name: last_name
         first_name: first_name
         gradeRecords:
-        - {}
-        - {}
+        - subject_name: math
+          grade: 6.5
+        - subject_name: science
+          grade: 7.0
     GradeRecord:
       required:
       - subject_name
